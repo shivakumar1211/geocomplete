@@ -30,7 +30,7 @@
     <script>
       $(function(){
         
-        $("#geocomplete").geocomplete()
+        $("#name").geocomplete()
           .bind("geocode:result", function(event, result){
             $.log("Result: " + result.formatted_address);
           })
@@ -42,12 +42,12 @@
           });
         
         $("#find").click(function(){
-          $("#geocomplete").trigger("geocode");
+          $("#name").trigger("geocode");
         });
         
         
         $("#examples a").click(function(){
-          $("#geocomplete").val($(this).text()).trigger("geocode");
+          $("#name").val($(this).text()).trigger("geocode");
           return false;
         });
         
